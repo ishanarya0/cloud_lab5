@@ -1,7 +1,7 @@
 var mysql = require('mysql');
-/*
+
 var con = mysql.createConnection({  
-    host: 'clouddb.cjjbekaoqujr.us-east-2.rds.amazonaws.com', 
+    host: 'clouddb1.cjjbekaoqujr.us-east-2.rds.amazonaws.com', 
      user: "cloud_db",  
      password: "pnaman03"  ,
      database: 'sys'
@@ -11,7 +11,7 @@ var con = mysql.createConnection({
      console.log("Connected!");  
    });
 
-*/
+
 
 
 exports.getview = function(req, res){
