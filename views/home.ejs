@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/home.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.js"></script>
+	<script type="text/javascript">
+	jQuery(function($j){
+		$j('#p').show(0).delay(5000).hide(0); 
+		
+	})
+	jQuery(function($j){
+		
+		$j('#p1').show(0).delay(5000).hide(0);
+	})
+	</script>
+    
+</head>
+<body style="background-color: #eae8ed;">
+	<div  style="text-align : center; ; margin-top: 50px; color: #36304a;">
+		<h2>FeedBack Portal</h2>
+	</div>
+   
+	<div class="login-wrap">
+		<div class="login-html">
+			<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">User</label>
+			<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Admin</label>
+			<div class="login-form">
+			<form role="form" method="post" action="/user" >
+				<div class="sign-in-htm">
+					<div class="group">
+						<label for="user" class="label">Username</label>
+						<input id="user" type="text" class="input" name = "name">
+					</div>
+					<div class="group">
+						<label for="pass" class="label">Password</label>
+						<input id="pass" type="password" class="input" data-type="password" name="pass">
+					</div>
+					<div class="group">
+						<input id="check" type="checkbox" class="check" checked>
+						<label for="check"><span class="icon"></span> Keep me Signed in</label>
+					</div>
+					<div class="group">
+						<input type="submit" class="button" value="Sign In">
+					</div>
+
+					<p style = "color : red ;margin : auto; text-align: center; " id = "p"> <%= error %></p>
+					<div class="hr"></div>
+					<div class="foot-lnk">
+						<a href="#forgot">Forgot Password?</a>
+					</div>
+				</div>
+				
+			</form>
+				<div class="sign-up-htm">
+			<form role="form" method="post" action="/admin" >
+					<div class="group">
+						<label for="user" class="label">Username</label>
+						<input id="user" type="text" class="input">
+					</div>
+					<div class="group">
+						<label for="pass" class="label">Password</label>
+						<input id="pass" type="password" class="input" data-type="password">
+					</div>
+					<div class="group">
+						<input id="check" type="checkbox" class="check" checked>
+						<label for="check"><span class="icon"></span> Keep me Signed in</label>
+					</div>
+					<div class="group">
+						<input type="submit" class="button" value="Sign In">
+					</div>
+					<p style = "color : red ;margin : auto; text-align: center; " id = "p1"> <%= error %></p>
+					<div class="hr"></div>
+					<div class="foot-lnk">
+						<a href="#forgot">Forgot Password?</a>
+					</div>
+				
+			</form>
+		</div>	
+		</div>
+		</div>
+	</div>
+</body>
+</html>
+

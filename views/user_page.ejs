@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/user_page.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+</head>
+<body style="background-color: #eae8ed;">
+   
+	<div class="login-wrap">
+		<div class="login-html">
+            <div class = "top">
+                <h2>FeedBack Form</h2>
+                <p>We would love to hear your thoughts or problems with anything so we can improve!</p>
+            </div>
+        <form role="form" method="post" action="/feed" >
+            <div class = "slct_crs">
+                <p>Select Course :</p>
+                <label class="radio-inline">
+                    <input type="radio"  id="radio_experience" name="theory" >
+                    CS-351 (Theory)
+                </label>
+                <label class="radio-inline">
+                    <input type="radio"  id="radio_experience" name="lab" >
+                    CS-351 (Lab)
+                </label>    
+            </div>
+
+            <div class = "disc">
+                    <label for="comments"> Comments and Suggestions:</label>
+                    <textarea class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comments" maxlength="6000" rows="7"></textarea>
+            </div>
+
+            <div class="disc">
+                <label for="name"> Your Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="disc">
+                <label for="email"> Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class = "login-form" style=" margin-top : 30px;">
+            <div class="group">
+                <input type="submit" class="button" value="SUBMIT" >
+            </div>
+            <p style = "color : red ;margin : auto; text-align: center; "> <%= error %></p>
+            </div>
+
+           
+
+            
+
+        </form>
+           
+            
+		</div>
+	</div>
+</body>
+</html>
+

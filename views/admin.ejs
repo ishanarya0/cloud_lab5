@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Admin Dashboard</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	<link rel="stylesheet" type="text/css" href="/stylesheets/mian.css">
+
+</head>
+<body>
+	<div  style="text-align : center; background: #cbcacf; margin-top: 50px; color: #36304a;">
+		<h1>Submitted FeedBacks</h1>
+	</div>
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">S.No.</th>
+								<th class="column1">Name</th>
+								<th class="column1">Email</th>
+								<th class="column3">FeedBack</th>
+							    <th class="column1">Course</th>
+							</tr>
+						</thead>
+					    <tbody>
+							
+					<%
+                    if(userData.length!=0){
+						var i=1;
+                    userData.forEach(function(data){
+						
+						var s = "Theory";
+						if(data.course === 2)
+						 {s = "Lab"}
+                    %>
+
+                    <tr>
+                        <tr>
+                            <td class="column1"><%= i %></td>
+                            <td class="column1"><%=data.username %></td>
+                            <td class="column1"><%=data.email %></td>
+                            <td class="column3"><%=data.cmnt %></a></td>
+                            <td class="column1"><%=s %></td>
+                        </tr>
+                    </tr>
+
+                    <%  i++;}) %>
+                    <% } else{ %>
+                    <tr>
+                        <td colspan="8">No Feedback Found</td>
+                    </tr>
+                    <% }  %>
+								
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+
+
+</body>
+</html>
